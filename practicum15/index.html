@@ -1,0 +1,1175 @@
+<!-- index.html (Practicum 15: Custom Toggle Switch for Application Settings) -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SkillBridge Corporate Training Portal</title>
+  <script>document.documentElement.classList.add("js");</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;800&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body id="top">
+
+  <div class="scroll-progress" id="scroll-progress"></div>
+
+  <header>
+    <h1>SkillBridge Corporate Training Portal</h1>
+    <p>Browse courses, watch training content and register for a batch.</p>
+    <p class="device-badge" aria-hidden="true"></p>
+  </header>
+
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="#top" class="brand">SkillBridge</a>
+
+      <input type="checkbox" id="menu-toggle" class="menu-toggle" aria-label="Toggle navigation menu">
+      <label for="menu-toggle" class="menu-btn">&#9776; Menu</label>
+
+      <ul class="nav-links">
+        <li><a href="#courses">Courses</a></li>
+        <li><a href="#finder">Finder</a></li>
+        <li><a href="#planner">Planner</a></li>
+        <li><a href="#trainers">Trainers</a></li>
+        <li><a href="#api-data">Live Data</a></li>
+        <li><a href="#task-manager">Tasks</a></li>
+        <li><a href="#settings">Settings</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#multimedia">Multimedia</a></li>
+        <li><a href="#location">Location</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#animations">Animations</a></li>
+        <li><a href="#responsive">Responsive</a></li>
+        <li><a href="#positioning">Positioning</a></li>
+        <li><a href="#register">Register</a></li>
+        <li><a href="https://www.w3schools.com/html/" target="_blank" rel="noopener">HTML Reference</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+
+    <section id="courses" class="reveal">
+      <h2>Available Courses</h2>
+      <p>Our training programmes are designed for employees at every level. Each course below lists its duration and learning outcomes. Use <strong>View Details</strong> to open more information or <strong>Enroll</strong> to reserve a seat. New courses added in the Training Planner appear here too.</p>
+
+      <div class="card-grid course-grid stagger">
+        <article>
+          <span class="badge badge-hot">Popular</span>
+          <h3>Effective Communication</h3>
+          <p><strong>Duration:</strong> 2 days (12 hours)</p>
+          <p><strong>Seats left:</strong> <span class="seats">12</span></p>
+          <h4>Learning Outcomes</h4>
+          <ul>
+            <li>Write clear business emails</li>
+            <li>Run focused team meetings</li>
+            <li>Give and receive feedback</li>
+          </ul>
+
+          <div class="card-actions">
+            <button type="button" class="btn btn-details" aria-expanded="false" aria-controls="details-comm">
+              <span class="btn-label">View Details</span>
+              <span class="arrow" aria-hidden="true">&#9662;</span>
+            </button>
+            <button type="button" class="btn btn-solid btn-enroll" data-course="communication" data-title="Effective Communication">
+              <span class="btn-label">Enroll</span>
+            </button>
+          </div>
+
+          <div class="details" id="details-comm">
+            <div class="details-inner">
+              <p><strong>Trainer:</strong> Priya Nair</p>
+              <p><strong>Next batch:</strong> 12 January 2027</p>
+              <p><strong>Mode:</strong> Online / Classroom</p>
+              <p><strong>Certificate:</strong> Yes, after the final assessment</p>
+            </div>
+          </div>
+        </article>
+
+        <article>
+          <span class="badge badge-new">New</span>
+          <h3>Leadership Essentials</h3>
+          <p><strong>Duration:</strong> 3 days (18 hours)</p>
+          <p><strong>Seats left:</strong> <span class="seats">8</span></p>
+          <h4>Learning Outcomes</h4>
+          <ul>
+            <li>Delegate work with clarity</li>
+            <li>Motivate and mentor a team</li>
+            <li>Handle conflict calmly</li>
+          </ul>
+
+          <div class="card-actions">
+            <button type="button" class="btn btn-details" aria-expanded="false" aria-controls="details-lead">
+              <span class="btn-label">View Details</span>
+              <span class="arrow" aria-hidden="true">&#9662;</span>
+            </button>
+            <button type="button" class="btn btn-solid btn-enroll" data-course="leadership" data-title="Leadership Essentials">
+              <span class="btn-label">Enroll</span>
+            </button>
+          </div>
+
+          <div class="details" id="details-lead">
+            <div class="details-inner">
+              <p><strong>Trainer:</strong> Rahul Khanna</p>
+              <p><strong>Next batch:</strong> 19 January 2027</p>
+              <p><strong>Mode:</strong> Classroom</p>
+              <p><strong>Certificate:</strong> Yes, after the final assessment</p>
+            </div>
+          </div>
+        </article>
+
+        <article>
+          <span class="badge badge-core">Essential</span>
+          <h3>Cybersecurity Awareness</h3>
+          <p><strong>Duration:</strong> 1 day (6 hours)</p>
+          <p><strong>Seats left:</strong> <span class="seats">20</span></p>
+          <h4>Learning Outcomes</h4>
+          <ul>
+            <li>Spot phishing attempts</li>
+            <li>Use strong passwords and MFA</li>
+            <li>Report incidents correctly</li>
+          </ul>
+
+          <div class="card-actions">
+            <button type="button" class="btn btn-details" aria-expanded="false" aria-controls="details-cyber">
+              <span class="btn-label">View Details</span>
+              <span class="arrow" aria-hidden="true">&#9662;</span>
+            </button>
+            <button type="button" class="btn btn-solid btn-enroll" data-course="cyber" data-title="Cybersecurity Awareness">
+              <span class="btn-label">Enroll</span>
+            </button>
+          </div>
+
+          <div class="details" id="details-cyber">
+            <div class="details-inner">
+              <p><strong>Trainer:</strong> Meera Iyer</p>
+              <p><strong>Next batch:</strong> 26 January 2027</p>
+              <p><strong>Mode:</strong> Online</p>
+              <p><strong>Certificate:</strong> Yes, after the final assessment</p>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <div class="info-grid">
+        <div class="panel">
+          <h3>Registration Steps</h3>
+          <ol>
+            <li>Choose a course.</li>
+            <li>Fill in the registration form.</li>
+            <li>Wait for the confirmation email.</li>
+          </ol>
+        </div>
+        <div class="panel">
+          <h3>Glossary</h3>
+          <dl>
+            <dt>Batch</dt>
+            <dd>A group of employees who attend a course together.</dd>
+            <dt>MFA</dt>
+            <dd>Multi-factor authentication, an extra login check.</dd>
+            <dt>Endpoint</dt>
+            <dd>A web address (URL) that returns data, usually as JSON.</dd>
+            <dt>CRUD</dt>
+            <dd>Create, Read, Update and Delete: the four basic data operations.</dd>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <!-- Practicum 14: Interactive Course Finder and Comparison Tool -->
+    <section id="finder" class="reveal">
+      <h2>Course Finder &amp; Comparison</h2>
+      <p>Search the catalogue, filter by category, mode and level, then tick <strong>Compare</strong> on up to three courses to see them side by side. Everything updates instantly as you type or click.</p>
+
+      <div class="finder-controls">
+        <div class="field-row finder-search-box">
+          <label for="finder-search">Search</label>
+          <input type="text" id="finder-search" placeholder="Course, trainer or skill" autocomplete="off">
+        </div>
+
+        <div class="field-row">
+          <label for="finder-mode">Mode</label>
+          <select id="finder-mode">
+            <option value="">All modes</option>
+            <option value="Online">Online</option>
+            <option value="Classroom">Classroom</option>
+            <option value="Hybrid">Hybrid</option>
+          </select>
+        </div>
+
+        <div class="field-row">
+          <label for="finder-level">Level</label>
+          <select id="finder-level">
+            <option value="">All levels</option>
+            <option value="Beginner">Beginner</option>
+            <option value="Intermediate">Intermediate</option>
+            <option value="Advanced">Advanced</option>
+          </select>
+        </div>
+
+        <div class="field-row">
+          <label for="finder-sort">Sort by</label>
+          <select id="finder-sort">
+            <option value="rating">Highest rated</option>
+            <option value="hours">Shortest duration</option>
+            <option value="price-low">Price: low to high</option>
+            <option value="price-high">Price: high to low</option>
+            <option value="title">Title A to Z</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="finder-chips" role="group" aria-label="Filter by category">
+        <button type="button" class="chip-btn active" data-cat="all" aria-pressed="true">All</button>
+        <button type="button" class="chip-btn" data-cat="Soft Skills" aria-pressed="false">Soft Skills</button>
+        <button type="button" class="chip-btn" data-cat="Technical" aria-pressed="false">Technical</button>
+        <button type="button" class="chip-btn" data-cat="Management" aria-pressed="false">Management</button>
+        <button type="button" class="btn btn-sm btn-danger" id="finder-reset">Reset Filters</button>
+      </div>
+
+      <p class="finder-count" id="finder-count" aria-live="polite"></p>
+      <p class="finder-note" id="finder-note" hidden>Online-only mode is ON (changed in Training Preferences). Only fully online courses are shown.</p>
+
+      <ul class="finder-grid" id="finder-grid"></ul>
+      <p class="plan-empty" id="finder-empty" hidden>No courses match your search or filters.</p>
+
+      <div class="compare-tray" id="compare-tray" hidden>
+        <div class="compare-head">
+          <h3>Compare Courses (<span id="compare-count">0</span>/3)</h3>
+          <button type="button" class="btn btn-sm btn-danger" id="compare-clear">Clear Comparison</button>
+        </div>
+        <div class="table-wrap compare-wrap">
+          <table id="compare-table">
+            <caption>Side-by-side comparison</caption>
+            <thead id="compare-thead"></thead>
+            <tbody id="compare-tbody"></tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="method-box">
+        <h3>Interactive Component Methods Used Here</h3>
+        <ul class="method-list">
+          <li><code>addEventListener()</code>: reacts to typing, clicks and drop-down changes.</li>
+          <li><code>filter()</code>: keeps only the courses that match the search and filters.</li>
+          <li><code>find()</code>: looks up a course by its id for the compare table.</li>
+          <li><code>classList.toggle()</code>, <code>add()</code> and <code>remove()</code>: highlight chips and selected cards.</li>
+          <li><code>querySelector()</code> and <code>querySelectorAll()</code>: select controls, chips and cards.</li>
+          <li><code>forEach()</code>: builds every card and comparison row.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="planner" class="reveal">
+      <h2>Training Planner</h2>
+      <p>Assign courses to employees, edit names, mark training as completed and remove entries. You can also add a brand-new course card. Every change is made with JavaScript DOM methods, so the page never reloads.</p>
+
+      <div class="dash">
+        <div class="dash-card">
+          <span class="dash-num" id="stat-courses">3</span>
+          <span class="dash-label">Courses</span>
+        </div>
+        <div class="dash-card">
+          <span class="dash-num" id="stat-total">0</span>
+          <span class="dash-label">Assignments</span>
+        </div>
+        <div class="dash-card">
+          <span class="dash-num" id="stat-done">0</span>
+          <span class="dash-label">Completed</span>
+        </div>
+      </div>
+
+      <div class="dom-grid">
+        <div class="dom-panel">
+          <h3>Assign Training</h3>
+          <div class="field-row">
+            <label for="emp-name">Employee name</label>
+            <input type="text" id="emp-name" maxlength="40" placeholder="e.g. Anita Raj" autocomplete="off">
+          </div>
+          <div class="field-row">
+            <label for="emp-course">Course</label>
+            <select id="emp-course"></select>
+          </div>
+          <button type="button" class="btn btn-solid" id="add-assignment">Add to Plan</button>
+          <p class="form-msg" id="planner-msg" role="status"></p>
+        </div>
+
+        <div class="dom-panel">
+          <h3>Add a New Course</h3>
+          <div class="field-row">
+            <label for="new-title">Course title</label>
+            <input type="text" id="new-title" maxlength="40" placeholder="e.g. Time Management" autocomplete="off">
+          </div>
+          <div class="field-row">
+            <label for="new-duration">Duration</label>
+            <input type="text" id="new-duration" maxlength="30" placeholder="e.g. 2 days (10 hours)" autocomplete="off">
+          </div>
+          <div class="field-row">
+            <label for="new-outcomes">Learning outcomes (separate with commas)</label>
+            <input type="text" id="new-outcomes" maxlength="150" placeholder="e.g. Plan the day, Set priorities" autocomplete="off">
+          </div>
+          <button type="button" class="btn btn-solid" id="add-course">Add Course Card</button>
+          <p class="form-msg" id="course-msg" role="status"></p>
+        </div>
+      </div>
+
+      <div class="plan">
+        <h3>Current Training Plan</h3>
+        <div class="plan-toolbar">
+          <input type="text" id="plan-search" placeholder="Search by name or course" aria-label="Search the training plan" autocomplete="off">
+          <button type="button" class="btn btn-sm" id="clear-done">Remove Completed</button>
+          <button type="button" class="btn btn-sm btn-danger" id="clear-all">Clear All</button>
+        </div>
+
+        <div class="plan-summary" id="plan-summary" aria-live="polite"></div>
+
+        <ul class="plan-list" id="plan-list"></ul>
+        <p class="plan-empty" id="plan-empty">No assignments yet. Add one above.</p>
+      </div>
+
+      <div class="method-box">
+        <h3>DOM Methods Used on This Page</h3>
+        <ul class="method-list">
+          <li><code>getElementById()</code> and <code>querySelector()</code>: find the inputs, buttons and lists.</li>
+          <li><code>createElement()</code> and <code>appendChild()</code>: build new plan items and course cards.</li>
+          <li><code>textContent</code> and <code>innerHTML</code>: show typed text safely and reset containers.</li>
+          <li><code>setAttribute()</code>: set <code>data-*</code>, <code>aria-*</code> and <code>hidden</code> attributes.</li>
+          <li><code>remove()</code>: delete plan items, course cards and dropdown options.</li>
+          <li><code>addEventListener()</code>: react to clicks, typing and the Enter key.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="trainers" class="reveal">
+      <h2>Trainer Details</h2>
+
+      <div class="table-wrap">
+        <table>
+          <caption>Trainers and their courses (scroll inside the table: the header stays fixed in place)</caption>
+          <thead>
+            <tr>
+              <th>Photo</th>
+              <th>Trainer</th>
+              <th>Course</th>
+              <th>Experience</th>
+              <th>Mode</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><img src="https://i.pravatar.cc/80?img=47" alt="Portrait of trainer Priya Nair" width="80" height="80"></td>
+              <td>Priya Nair</td>
+              <td>Effective Communication</td>
+              <td>11 years</td>
+              <td>Online / Classroom</td>
+            </tr>
+            <tr>
+              <td><img src="https://i.pravatar.cc/80?img=12" alt="Portrait of trainer Rahul Khanna" width="80" height="80"></td>
+              <td>Rahul Khanna</td>
+              <td>Leadership Essentials</td>
+              <td>15 years</td>
+              <td>Classroom</td>
+            </tr>
+            <tr>
+              <td><img src="https://i.pravatar.cc/80?img=45" alt="Portrait of trainer Meera Iyer" width="80" height="80"></td>
+              <td>Meera Iyer</td>
+              <td>Cybersecurity Awareness</td>
+              <td>9 years</td>
+              <td>Online</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <figure>
+        <img
+          src="https://picsum.photos/id/180/500/300"
+          srcset="https://picsum.photos/id/180/320/192 320w,
+                  https://picsum.photos/id/180/500/300 500w,
+                  https://picsum.photos/id/180/800/480 800w"
+          sizes="(max-width: 600px) 90vw, (max-width: 1024px) 60vw, 500px"
+          alt="Employees working together in an office training session"
+          width="500" height="300">
+        <figcaption>Figure 1: A classroom training session.</figcaption>
+      </figure>
+    </section>
+
+    <!-- Practicum 12: API-integrated data section -->
+    <section id="api-data" class="reveal">
+      <h2>Live Training Data (API)</h2>
+      <p>This section retrieves corporate-training data from a REST endpoint using <code>fetch()</code> with <code>async</code> / <code>await</code>. The JSON response is turned into table rows and summary cards by JavaScript. A loading indicator is shown while the request runs, and errors are handled with <code>try</code>, <code>catch</code> and <code>finally</code>.</p>
+
+      <div class="api-toolbar">
+        <div class="api-tabs" role="group" aria-label="Choose a data set">
+          <button type="button" class="btn api-tab active" data-endpoint="trainers" aria-pressed="true">Trainer Directory</button>
+          <button type="button" class="btn api-tab" data-endpoint="modules" aria-pressed="false">Course Modules</button>
+          <button type="button" class="btn api-tab" data-endpoint="progress" aria-pressed="false">Learner Progress</button>
+        </div>
+
+        <div class="api-controls">
+          <input type="text" id="api-search" placeholder="Filter the loaded data" aria-label="Filter the loaded data" autocomplete="off">
+          <button type="button" class="btn btn-solid btn-sm" id="api-refresh">Refresh</button>
+          <button type="button" class="btn btn-sm btn-danger" id="api-test-404">Test 404 Error</button>
+          <button type="button" class="btn btn-sm btn-danger" id="api-test-network">Test Network Error</button>
+        </div>
+      </div>
+
+      <div class="api-info">
+        <p><strong>Endpoint:</strong> <code id="api-url">Not requested yet</code></p>
+        <p class="api-meta" id="api-meta" aria-live="polite">Waiting for the first request.</p>
+      </div>
+
+      <div class="api-loader" id="api-loader" role="status" aria-live="polite" hidden>
+        <span class="loader-ring" aria-hidden="true"></span>
+        <p>Loading data from the server...</p>
+      </div>
+
+      <div class="api-error" id="api-error" role="alert" hidden>
+        <p id="api-error-text"></p>
+        <button type="button" class="btn btn-sm" id="api-retry">Try Again</button>
+      </div>
+
+      <div class="api-summary" id="api-summary"></div>
+
+      <div class="table-wrap api-table-wrap">
+        <table id="api-table">
+          <caption id="api-caption">Data table (click a column heading to sort)</caption>
+          <thead id="api-thead"></thead>
+          <tbody id="api-tbody"></tbody>
+        </table>
+      </div>
+
+      <div class="method-box">
+        <h3>Fetch API Methods Used in This Section</h3>
+        <ul class="method-list">
+          <li><code>fetch(url)</code>: sends an HTTP GET request to the endpoint and returns a Promise.</li>
+          <li><code>async</code> and <code>await</code>: wait for the response without freezing the page.</li>
+          <li><code>response.ok</code> and <code>response.json()</code>: check the status code, then parse the JSON body.</li>
+          <li><code>try</code>, <code>catch</code> and <code>finally</code>: handle failures, then always hide the loader.</li>
+          <li><code>createElement()</code>, <code>appendChild()</code> and <code>textContent</code>: build the table and cards from the data.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Practicum 13: Task Manager (CRUD + Local Storage) -->
+    <section id="task-manager" class="reveal">
+      <h2>Training Task Manager</h2>
+      <p>Plan the work behind every training programme. You can <strong>add</strong>, <strong>view</strong>, <strong>edit</strong>, <strong>delete</strong> and <strong>update the status</strong> of tasks. All tasks are saved in your browser with Local Storage, so they are still here after you refresh the page.</p>
+
+      <div class="task-stats">
+        <div class="api-stat">
+          <span class="api-stat-num" id="task-stat-total">0</span>
+          <span class="api-stat-label">Total tasks</span>
+        </div>
+        <div class="api-stat">
+          <span class="api-stat-num" id="task-stat-todo">0</span>
+          <span class="api-stat-label">To Do</span>
+        </div>
+        <div class="api-stat">
+          <span class="api-stat-num" id="task-stat-progress">0</span>
+          <span class="api-stat-label">In Progress</span>
+        </div>
+        <div class="api-stat">
+          <span class="api-stat-num" id="task-stat-done">0</span>
+          <span class="api-stat-label">Completed</span>
+        </div>
+      </div>
+
+      <div class="dom-panel task-form-panel">
+        <h3 id="task-form-title">Add a New Task</h3>
+
+        <form id="task-form" novalidate>
+          <div class="task-form-grid">
+            <div class="field-row">
+              <label for="task-title">Task title</label>
+              <input type="text" id="task-title" maxlength="60" placeholder="e.g. Prepare Leadership slides" autocomplete="off">
+            </div>
+
+            <div class="field-row">
+              <label for="task-assignee">Assigned to</label>
+              <input type="text" id="task-assignee" maxlength="40" placeholder="e.g. Rahul Khanna" autocomplete="off">
+            </div>
+
+            <div class="field-row">
+              <label for="task-course">Related course</label>
+              <select id="task-course"></select>
+            </div>
+
+            <div class="field-row">
+              <label for="task-priority">Priority</label>
+              <select id="task-priority">
+                <option value="High">High</option>
+                <option value="Medium" selected>Medium</option>
+                <option value="Low">Low</option>
+              </select>
+            </div>
+
+            <div class="field-row">
+              <label for="task-due">Due date</label>
+              <input type="date" id="task-due">
+            </div>
+
+            <div class="field-row">
+              <label for="task-status">Status</label>
+              <select id="task-status">
+                <option value="To Do">To Do</option>
+                <option value="In Progress">In Progress</option>
+                <option value="Completed">Completed</option>
+              </select>
+            </div>
+
+            <div class="field-row span-all">
+              <label for="task-desc">Description (optional)</label>
+              <textarea id="task-desc" rows="3" maxlength="200" placeholder="Short notes about the task"></textarea>
+            </div>
+          </div>
+
+          <div class="task-form-actions">
+            <button type="submit" class="btn btn-solid" id="task-submit">Add Task</button>
+            <button type="button" class="btn" id="task-cancel">Clear Form</button>
+          </div>
+          <p class="form-msg" id="task-msg" role="status"></p>
+        </form>
+      </div>
+
+      <div class="task-list-box">
+        <h3>Task List</h3>
+
+        <div class="task-toolbar">
+          <input type="text" id="task-search" placeholder="Search tasks" aria-label="Search tasks" autocomplete="off">
+
+          <select id="task-filter-status" aria-label="Filter by status">
+            <option value="">All statuses</option>
+            <option value="To Do">To Do</option>
+            <option value="In Progress">In Progress</option>
+            <option value="Completed">Completed</option>
+          </select>
+
+          <select id="task-filter-priority" aria-label="Filter by priority">
+            <option value="">All priorities</option>
+            <option value="High">High</option>
+            <option value="Medium">Medium</option>
+            <option value="Low">Low</option>
+          </select>
+
+          <select id="task-sort" aria-label="Sort tasks">
+            <option value="due">Sort: Due date</option>
+            <option value="priority">Sort: Priority</option>
+            <option value="newest">Sort: Newest first</option>
+          </select>
+
+          <button type="button" class="btn btn-sm" id="task-clear-done">Remove Completed</button>
+          <button type="button" class="btn btn-sm btn-danger" id="task-reset">Reset Sample Data</button>
+        </div>
+
+        <div class="table-wrap task-table-wrap">
+          <table id="task-table">
+            <caption id="task-caption">Training tasks</caption>
+            <thead>
+              <tr>
+                <th>Task</th>
+                <th>Assigned To</th>
+                <th>Course</th>
+                <th>Priority</th>
+                <th>Due Date</th>
+                <th>Status</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody id="task-tbody"></tbody>
+          </table>
+        </div>
+        <p class="plan-empty" id="task-empty" hidden>No tasks to show.</p>
+      </div>
+
+      <div class="panel task-deadlines">
+        <h3>Upcoming Deadlines</h3>
+        <ul class="deadline-list" id="task-deadlines"></ul>
+      </div>
+
+      <div class="method-box">
+        <h3>Task Manager Methods Used in This Section</h3>
+        <ul class="method-list">
+          <li><strong>Create:</strong> <code>push()</code> adds a new task object to the <code>tasks</code> array.</li>
+          <li><strong>Read:</strong> <code>createElement()</code> and <code>appendChild()</code> build the table rows; <code>filter()</code> applies search and filters.</li>
+          <li><strong>Update:</strong> <code>find()</code> locates the task by its id so its fields or status can be changed.</li>
+          <li><strong>Delete:</strong> <code>remove()</code> takes the row off the page and <code>filter()</code> drops the task from the array.</li>
+          <li><strong>Storage:</strong> <code>JSON.stringify()</code> with <code>localStorage.setItem()</code> saves; <code>localStorage.getItem()</code> with <code>JSON.parse()</code> loads.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Practicum 15: Custom Toggle Switch (application settings saved in Local Storage) -->
+    <section id="settings" class="reveal">
+      <h2>Training Preferences</h2>
+      <p>Use the custom toggle switches to turn portal settings on or off. The page changes the moment a switch is flipped, and your choices are saved in your browser with Local Storage, so they are still active after you refresh or reopen the page.</p>
+
+      <div class="settings-list">
+
+        <div class="setting-row" data-row="onlineOnly">
+          <div class="setting-text">
+            <p class="setting-name">Online-only courses</p>
+            <p class="setting-desc">The Course Finder lists only courses delivered fully online. Useful for remote teams.</p>
+          </div>
+          <label class="switch" for="set-onlineOnly">
+            <input type="checkbox" id="set-onlineOnly" class="switch-input" data-setting="onlineOnly" role="switch">
+            <span class="slider" aria-hidden="true"></span>
+            <span class="switch-state">Off</span>
+          </label>
+        </div>
+
+        <div class="setting-row" data-row="compactCards">
+          <div class="setting-text">
+            <p class="setting-name">Compact course cards</p>
+            <p class="setting-desc">Hides learning outcomes on course cards so more courses fit on the screen.</p>
+          </div>
+          <label class="switch" for="set-compactCards">
+            <input type="checkbox" id="set-compactCards" class="switch-input" data-setting="compactCards" role="switch">
+            <span class="slider" aria-hidden="true"></span>
+            <span class="switch-state">Off</span>
+          </label>
+        </div>
+
+        <div class="setting-row" data-row="reminders">
+          <div class="setting-text">
+            <p class="setting-name">Training reminders</p>
+            <p class="setting-desc">Shows a reminder confirmation every time you enroll in a course.</p>
+          </div>
+          <label class="switch" for="set-reminders">
+            <input type="checkbox" id="set-reminders" class="switch-input" data-setting="reminders" role="switch">
+            <span class="slider" aria-hidden="true"></span>
+            <span class="switch-state">Off</span>
+          </label>
+        </div>
+
+        <div class="setting-row" data-row="largeText">
+          <div class="setting-text">
+            <p class="setting-name">Large text mode</p>
+            <p class="setting-desc">Increases the text size across the whole portal for easier reading.</p>
+          </div>
+          <label class="switch" for="set-largeText">
+            <input type="checkbox" id="set-largeText" class="switch-input" data-setting="largeText" role="switch">
+            <span class="slider" aria-hidden="true"></span>
+            <span class="switch-state">Off</span>
+          </label>
+        </div>
+
+      </div>
+
+      <div class="settings-summary">
+        <h3>Current Settings</h3>
+        <p id="settings-status" aria-live="polite"></p>
+        <div class="plan-summary" id="settings-chips"></div>
+        <button type="button" class="btn btn-sm btn-danger" id="settings-reset">Reset to Defaults</button>
+      </div>
+
+      <div class="method-box">
+        <h3>Toggle Switch Methods Used in This Section</h3>
+        <ul class="method-list">
+          <li><code>&lt;input type="checkbox"&gt;</code> with <code>appearance: none</code>: the native checkbox look is removed and the box keeps the on/off state.</li>
+          <li><code>:checked</code> and <code>::before</code>: the track changes colour and the round knob slides with <code>transform: translateX()</code> and <code>transition</code>.</li>
+          <li><code>addEventListener("change")</code> and <code>checked</code>: react to every flip and read the new state.</li>
+          <li><code>classList.toggle()</code>: switches page behaviour classes such as compact cards and large text.</li>
+          <li><code>localStorage.setItem()</code> and <code>localStorage.getItem()</code>: save the settings and restore them when the page loads.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="gallery" class="reveal">
+      <h2>Training Gallery</h2>
+      <p>A look at life at SkillBridge: classrooms, workshops and learning in action. Click any image to open an enlarged preview.</p>
+
+      <div class="gallery-grid stagger">
+        <figure class="gallery-item">
+          <img src="https://picsum.photos/id/1/400/300" alt="Laptop on a desk used for an online training session" width="400" height="300" loading="lazy" tabindex="0" title="Click to enlarge">
+          <figcaption>Online Learning Setup: live virtual sessions for remote teams.</figcaption>
+        </figure>
+
+        <figure class="gallery-item">
+          <img src="https://picsum.photos/id/180/400/300" alt="Notebook and laptop prepared for a classroom workshop" width="400" height="300" loading="lazy" tabindex="0" title="Click to enlarge">
+          <figcaption>Classroom Workshop: hands-on practice with trainers.</figcaption>
+        </figure>
+
+        <figure class="gallery-item">
+          <img src="https://picsum.photos/id/20/400/300" alt="Desk with notebook and stationery for planning sessions" width="400" height="300" loading="lazy" tabindex="0" title="Click to enlarge">
+          <figcaption>Leadership Planning: setting goals and action plans.</figcaption>
+        </figure>
+
+        <figure class="gallery-item">
+          <img src="https://picsum.photos/id/26/400/300" alt="Organised workspace with accessories for team activities" width="400" height="300" loading="lazy" tabindex="0" title="Click to enlarge">
+          <figcaption>Team Activities: building trust through group tasks.</figcaption>
+        </figure>
+
+        <figure class="gallery-item">
+          <img src="https://picsum.photos/id/60/400/300" alt="Modern meeting room with a table and chairs" width="400" height="300" loading="lazy" tabindex="0" title="Click to enlarge">
+          <figcaption>Meeting Room: space for focused discussions.</figcaption>
+        </figure>
+
+        <figure class="gallery-item">
+          <img src="https://picsum.photos/id/119/400/300" alt="Close-up of a keyboard during a cybersecurity exercise" width="400" height="300" loading="lazy" tabindex="0" title="Click to enlarge">
+          <figcaption>Cybersecurity Lab: practising safe computer habits.</figcaption>
+        </figure>
+
+        <figure class="gallery-item">
+          <img src="https://picsum.photos/id/160/400/300" alt="Camera equipment used to record training videos" width="400" height="300" loading="lazy" tabindex="0" title="Click to enlarge">
+          <figcaption>Video Studio: recording course introduction videos.</figcaption>
+        </figure>
+
+        <figure class="gallery-item">
+          <img src="https://picsum.photos/id/48/400/300" alt="Laptop and coffee on a table during a learning break" width="400" height="300" loading="lazy" tabindex="0" title="Click to enlarge">
+          <figcaption>Learning Break: networking between sessions.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section id="multimedia" class="reveal">
+      <h2>Training Multimedia</h2>
+
+      <div class="card-grid stagger">
+        <article>
+          <h3>Course Introduction Video</h3>
+          <video controls width="640">
+            <source src="media/training-intro.mp4" type="video/mp4">
+            <source src="media/training-intro.webm" type="video/webm">
+            <track src="media/captions.vtt" kind="captions" srclang="en" label="English">
+            Your browser does not support the video tag.
+          </video>
+          <p><small>Caption: An overview of how our training sessions work.</small></p>
+        </article>
+
+        <article>
+          <h3>Trainer Podcast: Tips for Learning at Work</h3>
+          <audio controls>
+            <source src="media/learning-tips.mp3" type="audio/mpeg">
+            <source src="media/learning-tips.ogg" type="audio/ogg">
+            Your browser does not support the audio element.
+          </audio>
+          <p><small>Caption: A five-minute audio talk by our trainers.</small></p>
+        </article>
+      </div>
+    </section>
+
+    <section id="location" class="reveal">
+      <h2>Training Centre Location</h2>
+      <p>Find our training centre on the map below.</p>
+      <iframe
+        title="Map showing the training centre location in Chennai"
+        src="https://www.openstreetmap.org/export/embed.html?bbox=80.20%2C13.00%2C80.30%2C13.10&amp;layer=mapnik"
+        width="600" height="350">
+      </iframe>
+    </section>
+
+    <section id="faq" class="reveal">
+      <h2>Training FAQ</h2>
+      <p>Click a question to open or close its answer. Use the buttons to open or close every answer one after another.</p>
+
+      <div class="faq-controls">
+        <button type="button" class="btn" id="faq-expand">Expand All</button>
+        <button type="button" class="btn" id="faq-collapse">Collapse All</button>
+      </div>
+
+      <div class="faq-list">
+        <div class="faq-item">
+          <button type="button" class="faq-q" aria-expanded="false" aria-controls="faq-1">
+            <span>How do I enroll in a course?</span>
+            <span class="faq-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="faq-a" id="faq-1">
+            <div><p>Press the Enroll button on a course card, then complete the registration form at the bottom of the page.</p></div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button type="button" class="faq-q" aria-expanded="false" aria-controls="faq-2">
+            <span>Can I cancel my enrollment?</span>
+            <span class="faq-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="faq-a" id="faq-2">
+            <div><p>Yes. Press the green Enrolled button on the course card again and your seat is released.</p></div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button type="button" class="faq-q" aria-expanded="false" aria-controls="faq-3">
+            <span>Do I receive a certificate?</span>
+            <span class="faq-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="faq-a" id="faq-3">
+            <div><p>Every participant who passes the final assessment receives a digital certificate by email.</p></div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button type="button" class="faq-q" aria-expanded="false" aria-controls="faq-4">
+            <span>Are online sessions available?</span>
+            <span class="faq-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="faq-a" id="faq-4">
+            <div><p>Effective Communication and Cybersecurity Awareness can be attended online. Leadership Essentials is held in the classroom.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="animations" class="reveal">
+      <h2>Animation Lab</h2>
+      <p>Each control below plays an animated sequence in response to a click. Hover over the demo card to see a CSS transition.</p>
+
+      <div class="lab">
+        <div class="lab-panel">
+          <h3>Animation Playground</h3>
+          <div class="lab-stage">
+            <div class="lab-box" id="lab-box">
+              <span class="lab-logo">SB</span>
+              <span id="lab-name">Choose an animation</span>
+            </div>
+          </div>
+          <div class="lab-buttons">
+            <button type="button" class="btn" data-anim="anim-fade">Fade In</button>
+            <button type="button" class="btn" data-anim="anim-slide">Slide In</button>
+            <button type="button" class="btn" data-anim="anim-bounce">Bounce</button>
+            <button type="button" class="btn" data-anim="anim-shake">Shake</button>
+            <button type="button" class="btn" data-anim="anim-spin">Spin</button>
+            <button type="button" class="btn" data-anim="anim-pulse">Pulse</button>
+          </div>
+        </div>
+
+        <div class="lab-panel">
+          <h3>Notifications</h3>
+          <p>Click a button to slide in a notification. It closes by itself after a few seconds.</p>
+          <div class="lab-buttons">
+            <button type="button" class="btn btn-solid" data-toast="success">Success</button>
+            <button type="button" class="btn" data-toast="info">Info</button>
+            <button type="button" class="btn" data-toast="warning">Warning</button>
+          </div>
+        </div>
+
+        <div class="lab-panel lab-wide">
+          <h3>Enrollment Sequence</h3>
+          <p>Press Play to watch the four enrollment steps light up one after another.</p>
+
+          <div class="steps" id="steps">
+            <div class="step"><span class="step-num">1</span><span>Choose course</span></div>
+            <div class="step"><span class="step-num">2</span><span>Fill the form</span></div>
+            <div class="step"><span class="step-num">3</span><span>Submit</span></div>
+            <div class="step"><span class="step-num">4</span><span>Confirmation</span></div>
+          </div>
+
+          <div class="progress"><div class="progress-bar" id="progress-bar"></div></div>
+
+          <div class="lab-buttons">
+            <button type="button" class="btn btn-solid" id="run-steps">Play Sequence</button>
+            <button type="button" class="btn" id="reset-steps">Reset</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="responsive" class="reveal">
+      <h2>Responsive Design with Media Queries</h2>
+      <p>This page adapts to desktop, tablet and mobile screens. Resize the browser window and watch the layout, the menu and the badge in the header change.</p>
+
+      <div class="device-grid stagger">
+        <div class="device-card device-desktop">
+          <h3>Desktop</h3>
+          <p><strong>1025px and above</strong></p>
+          <p>Full horizontal menu, 4-column gallery, 3 course cards in a row.</p>
+        </div>
+        <div class="device-card device-tablet">
+          <h3>Tablet</h3>
+          <p><strong>601px to 1024px</strong></p>
+          <p>Centred menu, 3 or 2 gallery columns, stacked form labels.</p>
+        </div>
+        <div class="device-card device-mobile">
+          <h3>Mobile</h3>
+          <p><strong>600px and below</strong></p>
+          <p>Hamburger menu, single-column layout, full-width buttons.</p>
+        </div>
+      </div>
+
+      <div class="table-plain">
+        <table class="summary-table">
+          <caption>Breakpoints used in this page</caption>
+          <thead>
+            <tr><th>Device</th><th>Media query</th><th>Main layout changes</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Large desktop</td><td><code>@media (min-width: 1400px)</code></td><td>Wider content area and larger base text</td></tr>
+            <tr><td>Desktop</td><td><code>@media (min-width: 1025px)</code></td><td>Default layout, 4-column gallery</td></tr>
+            <tr><td>Tablet landscape</td><td><code>@media (min-width: 769px) and (max-width: 1024px)</code></td><td>3-column gallery, centred menu</td></tr>
+            <tr><td>Tablet portrait</td><td><code>@media (min-width: 601px) and (max-width: 768px)</code></td><td>2-column gallery, stacked form labels</td></tr>
+            <tr><td>Mobile</td><td><code>@media (max-width: 600px)</code></td><td>Hamburger menu, 1 column, full-width fields</td></tr>
+            <tr><td>Small mobile</td><td><code>@media (max-width: 400px)</code></td><td>Smaller text and tighter spacing</td></tr>
+            <tr><td>Phone landscape</td><td><code>@media (orientation: landscape) and (max-height: 500px)</code></td><td>Navbar no longer sticks, shorter header</td></tr>
+            <tr><td>Touch devices</td><td><code>@media (hover: none)</code></td><td>Hover lift effects switched off</td></tr>
+            <tr><td>Accessibility</td><td><code>@media (prefers-reduced-motion: reduce)</code></td><td>Animations and smooth scroll removed</td></tr>
+            <tr><td>Print</td><td><code>@media print</code></td><td>Menu and floating buttons hidden</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="positioning" class="reveal">
+      <h2>CSS Positioning Techniques</h2>
+      <p>Each box below uses a different <code>position</code> value. The dashed outline marks the parent container (the stage).</p>
+
+      <div class="pos-grid">
+
+        <div class="pos-card">
+          <h3>1. Static (default)</h3>
+          <div class="stage">
+            <div class="box box-a">Box A</div>
+            <div class="box box-b demo-static">Box B</div>
+            <div class="box box-c">Box C</div>
+          </div>
+          <p><code>position: static; top: 40px; left: 40px;</code> Offsets are ignored. Box B stays in normal flow.</p>
+        </div>
+
+        <div class="pos-card">
+          <h3>2. Relative</h3>
+          <div class="stage">
+            <div class="box box-a">Box A</div>
+            <div class="box box-b demo-relative">Box B</div>
+            <div class="box box-c">Box C</div>
+          </div>
+          <p><code>position: relative; top: 12px; left: 40px;</code> Box B shifts from its original place, which stays reserved.</p>
+        </div>
+
+        <div class="pos-card">
+          <h3>3. Absolute</h3>
+          <div class="stage">
+            <div class="box box-a">Box A</div>
+            <div class="box box-b demo-absolute">Box B</div>
+            <div class="box box-c">Box C</div>
+          </div>
+          <p><code>position: absolute; top: 8px; right: 8px;</code> Box B leaves the flow and sits in the stage's corner. Box C moves up.</p>
+        </div>
+
+        <div class="pos-card">
+          <h3>4. Fixed</h3>
+          <div class="stage stage-note">
+            <p>Look at the <strong>Enroll Now</strong> button (bottom-left) and <strong>Back to top</strong> (bottom-right). They stay on screen while you scroll.</p>
+          </div>
+          <p><code>position: fixed; bottom: 1.25rem; left: 1.25rem;</code> Positioned relative to the browser window.</p>
+        </div>
+
+        <div class="pos-card">
+          <h3>5. Sticky</h3>
+          <div class="scroll-box">
+            <div class="demo-sticky">Sticky heading</div>
+            <p>Scroll inside this box. The heading above sticks to the top edge once you reach it.</p>
+            <p>Sticky works like relative until a scroll threshold is reached, then it behaves like fixed inside its scroll container.</p>
+            <p>The main navigation bar and the trainer table header use the same technique.</p>
+            <p>Industry uses: sticky menus, table headers, section titles and sidebars.</p>
+            <p>Keep scrolling to see the heading stay in place.</p>
+          </div>
+          <p><code>position: sticky; top: 0;</code> Switches from relative to fixed at the threshold.</p>
+        </div>
+
+      </div>
+
+      <div class="table-plain">
+        <table class="summary-table">
+          <caption>Summary of position values</caption>
+          <thead>
+            <tr><th>Value</th><th>In normal flow?</th><th>Positioned relative to</th><th>Used in this page for</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><code>static</code></td><td>Yes</td><td>Not positioned</td><td>Default layout of all elements</td></tr>
+            <tr><td><code>relative</code></td><td>Yes (space kept)</td><td>Its own normal position</td><td>Course cards (parent for badges)</td></tr>
+            <tr><td><code>absolute</code></td><td>No</td><td>Nearest positioned ancestor</td><td>Course badges, card top bar</td></tr>
+            <tr><td><code>fixed</code></td><td>No</td><td>Browser window</td><td>Enroll Now and Back to top buttons</td></tr>
+            <tr><td><code>sticky</code></td><td>Yes until threshold</td><td>Scroll container</td><td>Navbar, table headers</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Practicum 11: Registration form with validation -->
+    <section id="register" class="reveal">
+      <h2>Training Registration Form</h2>
+      <p>Fields marked <span class="req">*</span> are required. Each field is checked as you type and again on submit.</p>
+
+      <div class="form-alert error" id="form-alert" role="alert" hidden></div>
+
+      <div class="form-alert ok" id="form-success" role="status" hidden>
+        <strong>Registration successful!</strong>
+        <span id="success-text"></span>
+        <button type="button" class="btn btn-sm" id="new-reg">Register Another Employee</button>
+      </div>
+
+      <form id="reg-form" action="#" method="post" enctype="multipart/form-data" novalidate>
+
+        <fieldset>
+          <legend>Personal Details</legend>
+
+          <div class="field">
+            <label for="name">Full Name <span class="req">*</span></label>
+            <input type="text" id="name" name="name" placeholder="e.g. Anita Raj"
+                   minlength="3" maxlength="50" pattern="[A-Za-z][A-Za-z .'\-]{2,49}"
+                   title="Use letters, spaces, dots, hyphens or apostrophes only (no numbers)"
+                   aria-describedby="name-error" required>
+            <small class="error-msg" id="name-error"></small>
+          </div>
+
+          <div class="field">
+            <label for="empid">Employee ID <span class="req">*</span></label>
+            <input type="text" id="empid" name="empid" placeholder="e.g. SB1234"
+                   minlength="6" maxlength="6" pattern="[A-Z]{2}[0-9]{4}"
+                   title="Two capital letters followed by four digits (example: SB1234)"
+                   aria-describedby="empid-error" required>
+            <small class="hint">Two capital letters + four digits.</small>
+            <small class="error-msg" id="empid-error"></small>
+          </div>
+
+          <div class="field">
+            <label for="email">Work Email <span class="req">*</span></label>
+            <input type="email" id="email" name="email" placeholder="name@company.com"
+                   maxlength="80" aria-describedby="email-error" required>
+            <small class="error-msg" id="email-error"></small>
+          </div>
+
+          <div class="field">
+            <label for="phone">Mobile Number <span class="req">*</span></label>
+            <input type="tel" id="phone" name="phone" placeholder="10-digit number"
+                   minlength="10" maxlength="10" pattern="[6-9][0-9]{9}" inputmode="numeric"
+                   title="Enter 10 digits starting with 6, 7, 8 or 9"
+                   aria-describedby="phone-error" required>
+            <small class="error-msg" id="phone-error"></small>
+          </div>
+
+          <div class="field">
+            <label for="password">Create Password <span class="req">*</span></label>
+            <input type="password" id="password" name="password" minlength="8" maxlength="30"
+                   pattern="(?=.*[A-Z])(?=.*[a-z])(?=.*\d).{8,30}"
+                   title="8 to 30 characters with at least one capital letter, one small letter and one digit"
+                   aria-describedby="password-error" required>
+            <small class="hint">At least 8 characters: capital letter, small letter and digit.</small>
+            <small class="error-msg" id="password-error"></small>
+          </div>
+
+          <div class="field">
+            <label for="confirm">Confirm Password <span class="req">*</span></label>
+            <input type="password" id="confirm" name="confirm" minlength="8" maxlength="30"
+                   aria-describedby="confirm-error" required>
+            <small class="error-msg" id="confirm-error"></small>
+          </div>
+
+          <div class="field">
+            <label for="age">Age <span class="req">*</span></label>
+            <input type="number" id="age" name="age" min="18" max="65" step="1"
+                   aria-describedby="age-error" required>
+            <small class="error-msg" id="age-error"></small>
+          </div>
+
+          <div class="field">
+            <label for="dob">Date of Birth <span class="req">*</span></label>
+            <input type="date" id="dob" name="dob" aria-describedby="dob-error" required>
+            <small class="error-msg" id="dob-error"></small>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Training Details</legend>
+
+          <div class="field">
+            <label for="course">Select Course <span class="req">*</span></label>
+            <select id="course" name="course" aria-describedby="course-error" required>
+              <option value="">-- Choose a course --</option>
+              <option value="communication">Effective Communication</option>
+              <option value="leadership">Leadership Essentials</option>
+              <option value="cyber">Cybersecurity Awareness</option>
+            </select>
+            <small class="error-msg" id="course-error"></small>
+          </div>
+
+          <div class="field">
+            <label for="startdate">Preferred Start Date <span class="req">*</span></label>
+            <input type="date" id="startdate" name="startdate" aria-describedby="startdate-error" required>
+            <small class="hint">Choose a weekday, today or later.</small>
+            <small class="error-msg" id="startdate-error"></small>
+          </div>
+
+          <div class="field">
+            <span class="group-label">Mode of Training <span class="req">*</span></span>
+            <div class="options">
+              <input type="radio" id="online" name="mode" value="online" required>
+              <label for="online">Online</label>
+              <input type="radio" id="classroom" name="mode" value="classroom">
+              <label for="classroom">Classroom</label>
+            </div>
+            <small class="error-msg" id="mode-error"></small>
+          </div>
+
+          <div class="field">
+            <span class="group-label">Areas of Interest <span class="req">*</span></span>
+            <div class="options">
+              <input type="checkbox" id="soft" name="interest" value="soft-skills">
+              <label for="soft">Soft Skills</label>
+              <input type="checkbox" id="tech" name="interest" value="technical">
+              <label for="tech">Technical</label>
+              <input type="checkbox" id="mgmt" name="interest" value="management">
+              <label for="mgmt">Management</label>
+            </div>
+            <small class="error-msg" id="interest-error"></small>
+          </div>
+
+          <div class="field">
+            <label for="comments">Comments (optional)</label>
+            <textarea id="comments" name="comments" rows="4" maxlength="300"
+                      placeholder="Any special requirements?" aria-describedby="comments-error"></textarea>
+            <small class="hint"><span id="comment-count">0</span> / 300 characters</small>
+            <small class="error-msg" id="comments-error"></small>
+          </div>
+
+          <div class="field">
+            <label for="idproof">Upload ID Proof (PDF, JPG or PNG, max 2 MB) <span class="req">*</span></label>
+            <input type="file" id="idproof" name="idproof" accept=".pdf,.jpg,.jpeg,.png"
+                   aria-describedby="idproof-error" required>
+            <small class="error-msg" id="idproof-error"></small>
+          </div>
+
+          <div class="field">
+            <div class="options">
+              <input type="checkbox" id="agree" name="agree" required>
+              <label for="agree">I agree to the training terms and conditions. <span class="req">*</span></label>
+            </div>
+            <small class="error-msg" id="agree-error"></small>
+          </div>
+        </fieldset>
+
+        <p class="form-actions">
+          <button type="submit" id="submit-btn" class="btn btn-solid">
+            <span class="btn-text">Register</span>
+            <span class="spinner" aria-hidden="true"></span>
+          </button>
+          <button type="reset" id="clear-btn" class="btn">Clear Form</button>
+        </p>
+      </form>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2026 SkillBridge Corporate Training</p>
+    <p>Contact: <a href="mailto:training@skillbridge.com">training@skillbridge.com</a></p>
+    <p><a href="#top" class="to-top">Back to top</a></p>
+  </footer>
+
+  <a href="#register" class="enroll-fab">Enroll Now</a>
+
+  <div class="toast-container" id="toast-container" aria-live="polite"></div>
+
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image preview" aria-hidden="true">
+    <div class="lightbox-box">
+      <button type="button" class="lightbox-close" id="lightbox-close" aria-label="Close preview">&times;</button>
+      <img id="lightbox-img" alt="">
+      <p id="lightbox-caption"></p>
+    </div>
+  </div>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
