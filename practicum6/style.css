@@ -1,0 +1,393 @@
+/* ========== 1. VARIABLES & RESET (box model) ========== */
+:root {
+  --ink: #1b2a41;
+  --teal: #0e7c86;
+  --teal-dark: #0a5c64;
+  --amber: #e9a23b;
+  --page: #eef2f5;
+  --card: #ffffff;
+  --line: #d5dde4;
+  --muted: #5b6b7a;
+}
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 70px; }
+body {
+  margin: 0;
+  font-family: "Source Sans 3", "Segoe UI", Arial, sans-serif;
+  font-size: 1.05rem;
+  line-height: 1.65;
+  color: var(--ink);
+  background: var(--page);
+}
+
+/* ========== 2. TYPOGRAPHY ========== */
+h1, h2, h3, h4 {
+  font-family: "Manrope", "Segoe UI", Arial, sans-serif;
+  line-height: 1.25;
+  margin: 0 0 .6rem;
+}
+h1 { font-size: clamp(1.9rem, 4vw, 2.8rem); font-weight: 800; letter-spacing: -.5px; }
+h2 { font-size: 1.7rem; font-weight: 800; }
+h3 { font-size: 1.2rem; font-weight: 600; }
+h4 { font-size: .95rem; font-weight: 600; color: var(--teal-dark); margin-top: 1rem; }
+p  { margin: 0 0 1rem; max-width: 70ch; }
+a  { color: var(--teal); text-decoration: none; transition: color .2s; }
+a:hover { color: var(--teal-dark); text-decoration: underline; }
+small { color: var(--muted); }
+code {
+  padding: .1rem .4rem;
+  font-family: Consolas, "Courier New", monospace;
+  font-size: .9em;
+  background: #e4edf2;
+  border-radius: 4px;
+}
+
+/* ========== 3. HEADER ========== */
+header { background: var(--ink); color: #fff; text-align: center; }
+header h1 { padding: 2.5rem 1rem 0; margin: 0; }
+header > p { margin: .5rem auto 0; padding: 0 1rem 1.5rem; color: #c3d0dc; }
+
+/* ========== 4. NAVIGATION (Flexbox + STICKY) ========== */
+.navbar {
+  position: sticky;                    /* STICKY: sticks to top while scrolling */
+  top: 0;
+  z-index: 100;
+  background: var(--teal);
+  box-shadow: 0 2px 8px rgba(0,0,0,.2);
+}
+.nav-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: .5rem 1.5rem;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: .5rem 1rem;
+}
+.brand {
+  color: #fff;
+  font-family: "Manrope", sans-serif;
+  font-size: 1.25rem;
+  font-weight: 800;
+  letter-spacing: -.3px;
+}
+.brand:hover { color: var(--amber); text-decoration: none; }
+.nav-links {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: center;
+  gap: .25rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.nav-links a {
+  display: block;
+  padding: .5rem 1rem;
+  color: #fff;
+  font-weight: 600;
+  border-radius: 6px;
+  transition: background .25s, transform .25s;
+}
+.nav-links a:hover { background: var(--teal-dark); text-decoration: none; transform: translateY(-2px); }
+
+/* ========== 5. PAGE LAYOUT ========== */
+main { max-width: 1100px; width: 92%; margin: 2rem auto; }
+section {
+  background: var(--card);
+  padding: 2rem;
+  margin-bottom: 2rem;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  box-shadow: 0 4px 14px rgba(27,42,65,.06);
+}
+section > h2 {
+  padding-bottom: .5rem;
+  margin-bottom: 1.2rem;
+  border-bottom: 3px solid var(--amber);
+  display: inline-block;
+}
+
+/* ========== 6. CARDS (RELATIVE parent + ABSOLUTE children) ========== */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.25rem;
+  margin: 1.5rem 0;
+}
+article {
+  position: relative;                  /* RELATIVE: anchor for absolute children */
+  padding: 1.5rem 1.25rem 1.25rem;
+  background: #f8fafb;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform .3s, box-shadow .3s, border-color .3s;
+}
+article::before {
+  content: "";
+  position: absolute;                  /* ABSOLUTE: top colour bar */
+  top: 0; left: 0;
+  width: 100%; height: 5px;
+  background: var(--teal);
+}
+article:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 24px rgba(27,42,65,.15);
+  border-color: var(--teal);
+}
+article ul { margin: 0; padding-left: 1.2rem; }
+article li::marker { color: var(--amber); }
+
+/* ABSOLUTE: corner badges */
+.badge {
+  position: absolute;
+  top: 14px;
+  right: 12px;
+  padding: .15rem .7rem;
+  font-size: .8rem;
+  font-weight: 600;
+  color: #fff;
+  border-radius: 999px;
+}
+.badge-hot  { background: #d64545; }
+.badge-new  { background: var(--teal); }
+.badge-core { background: var(--ink); }
+article h3 { padding-right: 5.5rem; }   /* keep the title clear of the badge */
+
+.info-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.25rem; }
+.panel { padding: 1.25rem; border-left: 5px solid var(--amber); background: #fff8ec; border-radius: 0 10px 10px 0; }
+.panel ol { margin: 0; padding-left: 1.2rem; }
+dt { font-weight: 600; color: var(--teal-dark); }
+dd { margin: 0 0 .6rem 1rem; }
+
+/* ========== 7. TABLE (sticky header inside a scroll container) ========== */
+.table-wrap {
+  max-height: 260px;                   /* creates the scroll container */
+  overflow: auto;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+table { width: 100%; border-collapse: collapse; }
+caption { caption-side: top; text-align: left; font-weight: 600; padding: .6rem 1rem; color: var(--muted); }
+th, td { padding: .8rem 1rem; text-align: left; border-bottom: 1px solid var(--line); vertical-align: middle; }
+thead th {
+  position: sticky;                    /* STICKY: header stays visible */
+  top: 0;
+  z-index: 2;
+  background: var(--ink);
+  color: #fff;
+  font-family: "Manrope", sans-serif;
+}
+tbody tr:nth-child(even) { background: #f3f7f9; }
+tbody tr { transition: background .2s; }
+tbody tr:hover { background: #dff1f2; }
+td img { display: block; border-radius: 50%; border: 3px solid var(--amber); }
+
+/* ========== 8. FIGURE & MEDIA ========== */
+figure { margin: 1.5rem 0 0; text-align: center; }
+figure img { max-width: 100%; height: auto; border-radius: 10px; box-shadow: 0 6px 18px rgba(0,0,0,.18); }
+figcaption { margin-top: .5rem; font-style: italic; color: var(--muted); }
+video, audio { display: block; max-width: 100%; margin-bottom: .6rem; border-radius: 8px; background: #000; }
+audio { width: 100%; max-width: 420px; background: none; }
+iframe { display: block; width: 100%; max-width: 100%; height: 350px; border: 3px solid var(--line); border-radius: 10px; }
+
+/* ========== 9. POSITIONING SHOWCASE ========== */
+.pos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+  gap: 1.25rem;
+  margin: 1.5rem 0;
+}
+.pos-card {
+  padding: 1.25rem;
+  background: #f8fafb;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+}
+.pos-card p { font-size: .95rem; margin: .8rem 0 0; }
+
+/* The stage is the positioned parent for the absolute demo */
+.stage {
+  position: relative;                  /* parent for absolute child */
+  height: 190px;
+  padding: 10px;
+  background: #fff;
+  border: 2px dashed var(--teal);
+  border-radius: 8px;
+}
+.box {
+  width: 90px;
+  padding: .4rem;
+  margin-bottom: 6px;
+  font-weight: 600;
+  font-size: .9rem;
+  text-align: center;
+  color: #fff;
+  border-radius: 6px;
+}
+.box-a { background: var(--ink); }
+.box-b { background: var(--amber); color: var(--ink); }
+.box-c { background: var(--teal); }
+
+/* 1. STATIC: top/left have no effect */
+.demo-static {
+  position: static;
+  top: 40px;
+  left: 40px;
+}
+/* 2. RELATIVE: shifted from its normal position, space is kept */
+.demo-relative {
+  position: relative;
+  top: 12px;
+  left: 40px;
+}
+/* 3. ABSOLUTE: removed from flow, placed against .stage */
+.demo-absolute {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+}
+/* 4. FIXED note box */
+.stage-note {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: .95rem;
+}
+.stage-note p { margin: 0; }
+
+/* 5. STICKY inside a scrolling box */
+.scroll-box {
+  height: 190px;
+  overflow-y: auto;
+  padding: 0 .8rem .8rem;
+  background: #fff;
+  border: 2px dashed var(--teal);
+  border-radius: 8px;
+}
+.demo-sticky {
+  position: sticky;
+  top: 0;
+  margin: 0 -.8rem .6rem;
+  padding: .5rem .8rem;
+  font-family: "Manrope", sans-serif;
+  font-weight: 800;
+  color: #fff;
+  background: var(--teal-dark);
+}
+
+/* Summary table (not scrollable) */
+.table-plain { overflow-x: auto; border: 1px solid var(--line); border-radius: 8px; }
+.summary-table thead th { position: static; }
+.summary-table td:first-child { white-space: nowrap; }
+
+/* ========== 10. FORM ========== */
+fieldset { margin: 0 0 1.5rem; padding: 1.25rem 1.5rem; border: 2px solid var(--line); border-radius: 10px; }
+legend { padding: 0 .6rem; font-family: "Manrope", sans-serif; font-weight: 800; color: var(--teal-dark); }
+label { font-weight: 600; }
+fieldset > p > label:first-child { display: inline-block; min-width: 190px; }
+input[type="text"], input[type="email"], input[type="password"], input[type="number"],
+input[type="date"], select, textarea {
+  width: 100%; max-width: 380px;
+  padding: .55rem .75rem;
+  font: inherit;
+  border: 1.5px solid #b5c2cd;
+  border-radius: 6px;
+  background: #fff;
+  transition: border-color .2s, box-shadow .2s;
+}
+textarea { resize: vertical; max-width: 100%; }
+input:hover, select:hover, textarea:hover { border-color: var(--teal); }
+input:focus, select:focus, textarea:focus {
+  outline: none; border-color: var(--teal); box-shadow: 0 0 0 3px rgba(14,124,134,.25);
+}
+input[type="radio"], input[type="checkbox"] { accent-color: var(--teal); margin: 0 .25rem 0 .75rem; }
+input[type="file"] { font: inherit; }
+
+input[type="submit"], input[type="reset"] {
+  padding: .7rem 1.8rem; margin-right: .5rem;
+  font: 600 1rem "Manrope", sans-serif;
+  border: 2px solid var(--teal); border-radius: 8px;
+  cursor: pointer;
+  transition: background .25s, color .25s, transform .2s;
+}
+input[type="submit"] { background: var(--teal); color: #fff; }
+input[type="submit"]:hover { background: var(--teal-dark); transform: translateY(-2px); }
+input[type="reset"] { background: #fff; color: var(--teal); }
+input[type="reset"]:hover { background: var(--teal); color: #fff; }
+
+/* ========== 11. FOOTER + FIXED BUTTONS ========== */
+footer { background: var(--ink); color: #c3d0dc; text-align: center; padding: 1.5rem 1rem; }
+footer p { margin: .2rem auto; }
+footer a { color: var(--amber); }
+
+/* FIXED: Back to top (bottom-right) */
+.to-top {
+  position: fixed;
+  right: 1.25rem;
+  bottom: 1.25rem;
+  z-index: 200;
+  padding: .6rem 1rem;
+  background: var(--amber);
+  color: var(--ink);
+  font-weight: 600;
+  border-radius: 999px;
+  box-shadow: 0 4px 12px rgba(0,0,0,.3);
+  transition: transform .2s;
+}
+footer a.to-top:hover { transform: translateY(-3px); text-decoration: none; color: var(--ink); }
+
+/* FIXED: Enroll Now (bottom-left) */
+.enroll-fab {
+  position: fixed;
+  left: 1.25rem;
+  bottom: 1.25rem;
+  z-index: 200;
+  padding: .7rem 1.3rem;
+  background: var(--teal);
+  color: #fff;
+  font-family: "Manrope", sans-serif;
+  font-weight: 800;
+  border-radius: 999px;
+  box-shadow: 0 4px 12px rgba(0,0,0,.3);
+  transition: background .25s, transform .2s;
+}
+.enroll-fab:hover { background: var(--teal-dark); color: #fff; text-decoration: none; transform: translateY(-3px); }
+
+/* ========== 12. RESPONSIVE ========== */
+@media (max-width: 900px) {
+  .nav-container { justify-content: center; }
+  .nav-links { justify-content: center; }
+}
+
+@media (max-width: 600px) {
+  /* a tall stacked menu should not cover the screen while scrolling */
+  .navbar { position: static; }
+
+  .nav-container {
+    flex-direction: column;
+    align-items: stretch;
+    text-align: center;
+  }
+  .nav-links {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+  }
+  .nav-links a {
+    padding: .75rem 1rem;
+    border-bottom: 1px solid rgba(255,255,255,.15);
+    border-radius: 0;
+  }
+  .nav-links a:hover { transform: none; }
+
+  section { padding: 1.25rem; }
+  fieldset > p > label:first-child { display: block; min-width: 0; }
+  iframe { height: 260px; }
+}

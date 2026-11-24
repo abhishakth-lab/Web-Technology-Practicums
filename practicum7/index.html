@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SkillBridge Corporate Training Portal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;800&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body id="top">
+
+  <!-- ================= HEADER ================= -->
+  <header>
+    <h1>SkillBridge Corporate Training Portal</h1>
+    <p>Browse courses, watch training content and register for a batch.</p>
+  </header>
+
+  <!-- ================= NAVIGATION (Flexbox + position: sticky) ================= -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="#top" class="brand">SkillBridge</a>
+
+      <ul class="nav-links">
+        <li><a href="#courses">Courses</a></li>
+        <li><a href="#trainers">Trainers</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#multimedia">Multimedia</a></li>
+        <li><a href="#location">Location</a></li>
+        <li><a href="#positioning">Positioning</a></li>
+        <li><a href="#register">Register</a></li>
+        <li><a href="https://www.w3schools.com/html/" target="_blank" rel="noopener">HTML Reference</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+
+    <!-- ================= SECTION: COURSES ================= -->
+    <section id="courses">
+      <h2>Available Courses</h2>
+      <p>Our training programmes are designed for employees at every level. Each course below lists its duration and learning outcomes.</p>
+
+      <div class="card-grid">
+        <article>
+          <span class="badge badge-hot">Popular</span>
+          <h3>Effective Communication</h3>
+          <p><strong>Duration:</strong> 2 days (12 hours)</p>
+          <h4>Learning Outcomes</h4>
+          <ul>
+            <li>Write clear business emails</li>
+            <li>Run focused team meetings</li>
+            <li>Give and receive feedback</li>
+          </ul>
+        </article>
+
+        <article>
+          <span class="badge badge-new">New</span>
+          <h3>Leadership Essentials</h3>
+          <p><strong>Duration:</strong> 3 days (18 hours)</p>
+          <h4>Learning Outcomes</h4>
+          <ul>
+            <li>Delegate work with clarity</li>
+            <li>Motivate and mentor a team</li>
+            <li>Handle conflict calmly</li>
+          </ul>
+        </article>
+
+        <article>
+          <span class="badge badge-core">Essential</span>
+          <h3>Cybersecurity Awareness</h3>
+          <p><strong>Duration:</strong> 1 day (6 hours)</p>
+          <h4>Learning Outcomes</h4>
+          <ul>
+            <li>Spot phishing attempts</li>
+            <li>Use strong passwords and MFA</li>
+            <li>Report incidents correctly</li>
+          </ul>
+        </article>
+      </div>
+
+      <div class="info-grid">
+        <div class="panel">
+          <h3>Registration Steps</h3>
+          <ol>
+            <li>Choose a course.</li>
+            <li>Fill in the registration form.</li>
+            <li>Wait for the confirmation email.</li>
+          </ol>
+        </div>
+        <div class="panel">
+          <h3>Glossary</h3>
+          <dl>
+            <dt>Batch</dt>
+            <dd>A group of employees who attend a course together.</dd>
+            <dt>MFA</dt>
+            <dd>Multi-factor authentication, an extra login check.</dd>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= SECTION: TRAINERS (sticky table header) ================= -->
+    <section id="trainers">
+      <h2>Trainer Details</h2>
+
+      <div class="table-wrap">
+        <table>
+          <caption>Trainers and their courses (scroll inside the table: the header stays fixed in place)</caption>
+          <thead>
+            <tr>
+              <th>Photo</th>
+              <th>Trainer</th>
+              <th>Course</th>
+              <th>Experience</th>
+              <th>Mode</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><img src="https://i.pravatar.cc/80?img=47" alt="Portrait of trainer Priya Nair" width="80" height="80"></td>
+              <td>Priya Nair</td>
+              <td>Effective Communication</td>
+              <td>11 years</td>
+              <td>Online / Classroom</td>
+            </tr>
+            <tr>
+              <td><img src="https://i.pravatar.cc/80?img=12" alt="Portrait of trainer Rahul Khanna" width="80" height="80"></td>
+              <td>Rahul Khanna</td>
+              <td>Leadership Essentials</td>
+              <td>15 years</td>
+              <td>Classroom</td>
+            </tr>
+            <tr>
+              <td><img src="https://i.pravatar.cc/80?img=45" alt="Portrait of trainer Meera Iyer" width="80" height="80"></td>
+              <td>Meera Iyer</td>
+              <td>Cybersecurity Awareness</td>
+              <td>9 years</td>
+              <td>Online</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <figure>
+        <img src="https://picsum.photos/id/180/500/300" alt="Employees working together in an office training session" width="500" height="300">
+        <figcaption>Figure 1: A classroom training session.</figcaption>
+      </figure>
+    </section>
+
+    <!-- ================= SECTION: IMAGE GALLERY (Practicum 7: CSS Grid) ================= -->
+    <section id="gallery">
+      <h2>Training Gallery</h2>
+      <p>A look at life at SkillBridge: classrooms, workshops and learning in action. The grid adjusts from four columns to two and then one as the screen gets smaller.</p>
+
+      <div class="gallery-grid">
+        <figure class="gallery-item">
+          <img src="https://picsum.photos/id/1/400/300" alt="Laptop on a desk used for an online training session" width="400" height="300" loading="lazy">
+          <figcaption>Online Learning Setup: live virtual sessions for remote teams.</figcaption>
+        </figure>
+
+        <figure class="gallery-item">
+          <img src="https://picsum.photos/id/180/400/300" alt="Notebook and laptop prepared for a classroom workshop" width="400" height="300" loading="lazy">
+          <figcaption>Classroom Workshop: hands-on practice with trainers.</figcaption>
+        </figure>
+
+        <figure class="gallery-item">
+          <img src="https://picsum.photos/id/20/400/300" alt="Desk with notebook and stationery for planning sessions" width="400" height="300" loading="lazy">
+          <figcaption>Leadership Planning: setting goals and action plans.</figcaption>
+        </figure>
+
+        <figure class="gallery-item">
+          <img src="https://picsum.photos/id/26/400/300" alt="Organised workspace with accessories for team activities" width="400" height="300" loading="lazy">
+          <figcaption>Team Activities: building trust through group tasks.</figcaption>
+        </figure>
+
+        <figure class="gallery-item">
+          <img src="https://picsum.photos/id/60/400/300" alt="Modern meeting room with a table and chairs" width="400" height="300" loading="lazy">
+          <figcaption>Meeting Room: space for focused discussions.</figcaption>
+        </figure>
+
+        <figure class="gallery-item">
+          <img src="https://picsum.photos/id/119/400/300" alt="Close-up of a keyboard during a cybersecurity exercise" width="400" height="300" loading="lazy">
+          <figcaption>Cybersecurity Lab: practising safe computer habits.</figcaption>
+        </figure>
+
+        <figure class="gallery-item">
+          <img src="https://picsum.photos/id/160/400/300" alt="Camera equipment used to record training videos" width="400" height="300" loading="lazy">
+          <figcaption>Video Studio: recording course introduction videos.</figcaption>
+        </figure>
+
+        <figure class="gallery-item">
+          <img src="https://picsum.photos/id/48/400/300" alt="Laptop and coffee on a table during a learning break" width="400" height="300" loading="lazy">
+          <figcaption>Learning Break: networking between sessions.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ================= SECTION: MULTIMEDIA ================= -->
+    <section id="multimedia">
+      <h2>Training Multimedia</h2>
+
+      <div class="card-grid">
+        <article>
+          <h3>Course Introduction Video</h3>
+          <video controls width="640">
+            <source src="media/training-intro.mp4" type="video/mp4">
+            <source src="media/training-intro.webm" type="video/webm">
+            <track src="media/captions.vtt" kind="captions" srclang="en" label="English">
+            Your browser does not support the video tag.
+          </video>
+          <p><small>Caption: An overview of how our training sessions work.</small></p>
+        </article>
+
+        <article>
+          <h3>Trainer Podcast: Tips for Learning at Work</h3>
+          <audio controls>
+            <source src="media/learning-tips.mp3" type="audio/mpeg">
+            <source src="media/learning-tips.ogg" type="audio/ogg">
+            Your browser does not support the audio element.
+          </audio>
+          <p><small>Caption: A five-minute audio talk by our trainers.</small></p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ================= SECTION: EMBEDDED CONTENT ================= -->
+    <section id="location">
+      <h2>Training Centre Location</h2>
+      <p>Find our training centre on the map below.</p>
+      <iframe
+        title="Map showing the training centre location in Chennai"
+        src="https://www.openstreetmap.org/export/embed.html?bbox=80.20%2C13.00%2C80.30%2C13.10&amp;layer=mapnik"
+        width="600" height="350">
+      </iframe>
+    </section>
+
+    <!-- ================= SECTION: CSS POSITIONING SHOWCASE ================= -->
+    <section id="positioning">
+      <h2>CSS Positioning Techniques</h2>
+      <p>Each box below uses a different <code>position</code> value. The dashed outline marks the parent container (the stage).</p>
+
+      <div class="pos-grid">
+
+        <!-- STATIC -->
+        <div class="pos-card">
+          <h3>1. Static (default)</h3>
+          <div class="stage">
+            <div class="box box-a">Box A</div>
+            <div class="box box-b demo-static">Box B</div>
+            <div class="box box-c">Box C</div>
+          </div>
+          <p><code>position: static; top: 40px; left: 40px;</code> Offsets are ignored. Box B stays in normal flow.</p>
